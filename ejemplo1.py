@@ -1,10 +1,12 @@
 import smtplib
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
-
-HOST = "smtp.gmail.com" 
-Puerto = 587
-USUARIO = "abelinomoises@gmail.com"
-PASS = "mpbx spvs nhxd lxrn"
+HOST = os.getenv("HOST")
+Puerto = os.getenv("Puerto")
+USUARIO = os.getenv("USUARIO")
+PASS = os.getenv("PASS")
 
 
 destinatario = ["rubiomoises27@icloud.com ", "yimu2104@gmail.com", "04karenportillo@gmail.com"] 
