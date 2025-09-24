@@ -24,7 +24,7 @@ mensaje ["To"] = destinatario
 mensaje ["Subject"] = asunto 
 mensaje.attach(MIMEText(cuerpo, 'plain'))
 
-ruta_archivo = "creacion_de_DB.pdf"
+ruta_archivo = "semana8E.pdf"
 nombre_archivo = os.path.basename(ruta_archivo)
 
 with open(nombre_archivo,"rb") as f:
@@ -44,4 +44,4 @@ with smtplib.SMTP(HOST,PUERTO) as server:
     server.sendmail(USUARIO,destinatario,mensaje.as_string())
     print("Correo enviado")
 
-    
+
