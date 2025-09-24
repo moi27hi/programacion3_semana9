@@ -42,3 +42,6 @@ with smtplib.SMTP(HOST,PUERTO) as server:
     server.starttls()
     server.login(USUARIO,PASS)
     server.sendmail(USUARIO,destinatario,mensaje.as_string())
+    print("Correo enviado")
+
+    
