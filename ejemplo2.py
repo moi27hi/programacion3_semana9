@@ -14,9 +14,9 @@ USUARIO = os.getenv("USUARIO")
 PASS = os.getenv("PASS")
 
 
-destinatario = "rubiomoises27@icloud.com"  
+destinatario = "rubiomoises27@icloud.com"
 asunto  = "Prueba de correo"
-cuerpo = "Enviando archivo adjunto solicitado"
+cuerpo = "Enviando archivo adjunto solicitado."
 
 mensaje = MIMEMultipart()
 mensaje["From"] = USUARIO
@@ -43,5 +43,6 @@ with smtplib.SMTP(HOST,PUERTO) as server:
     server.login(USUARIO,PASS)
     server.sendmail(USUARIO,destinatario,mensaje.as_string())
     print("Correo enviado")
+
 
 
